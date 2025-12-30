@@ -5,6 +5,9 @@ __pycache__
 *.pyd
 .Python
 
+# Scripts
+src/sandbox.py
+
 # Virtual environment (recommended name)
 .venv
 
