@@ -11,13 +11,6 @@ WKSCLDR = "Calendar"
 WKSFCALC = "ForeCalc"
 WKSFDAI = "ForeDaily"
 WKSFMON = "ForeMonth"
-wksSa1 = "SalesForeYr1"
-wksSa2 = "SalesForeYr2"
-wksSa3 = "SalesForeYr3"
-wksProp = "Property"
-wksPr = "Promos"
-wksExp = "Expenses"
-
 
 # --- Sheet metadata ---
 
