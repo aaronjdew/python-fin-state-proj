@@ -4,7 +4,7 @@
 
 import calendar as cal
 from datetime import datetime as dt
-import config as cn
+import constants as cn
 
 
 def day_type(day):
@@ -58,3 +58,7 @@ def business_month(act_date, workbook):
     if act_month >= bus_mon_1:
         return (act_month - bus_mon_1) + 1
     return (act_month - bus_mon_1) + 13
+
+
+if __name__ == "__main__":
+    print("This module is intended for import only")
