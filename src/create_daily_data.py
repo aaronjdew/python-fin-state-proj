@@ -8,7 +8,7 @@ import warnings as wn
 import numpy as np
 import pandas as pd
 from openpyxl import load_workbook as lw
-import config as cn
+import constants as cn
 
 
 def clear_data_wksfdai():

@@ -8,7 +8,7 @@
 import warnings as wn
 import numpy as np
 import pandas as pd
-import config as cn
+import constants as cn
 
 
 def clear_data_wksfmon():

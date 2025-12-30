@@ -6,7 +6,7 @@ import sys
 from datetime import date
 import openpyxl as op
 from dateutil.relativedelta import relativedelta as rd
-import config as cn
+import constants as cn
 
 
 def create_bus_years():
@@ -52,3 +52,7 @@ def create_bus_years():
     wkbbd.save(filepath)
 
     print("Business Years Complete!")
+
+
+if __name__ == "__main__":
+    print("This module is intended for import only")

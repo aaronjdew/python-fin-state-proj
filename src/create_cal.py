@@ -10,12 +10,12 @@ from dateutil.relativedelta import relativedelta as rd
 import pandas as pd
 import numpy as np
 from openpyxl import load_workbook as lw
+import constants as cn
 from global_functions import (
     day_type as dt,
     get_end_of_month as eom,
     business_year as bus_yr,
     business_month as bus_mon)
-import config as cn
 
 
 def clear_data_wkscldr():
