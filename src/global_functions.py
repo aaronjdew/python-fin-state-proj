@@ -3,27 +3,38 @@
 -------------------------------------------------------"""
 
 import calendar as cal
-from datetime import datetime as dt
+from datetime import date
 import constants as cn
 
 
-def day_type(day):
+def day_type(day: str) -> str:
+    """---------------------------------------------------
+    func: Grouping of day into day type
+    ---------------------------------------------------"""
 
     if day not in ('Sat', 'Sun'):
         return 'Week'
     return day
 
 
-def get_end_of_month(eomdate):
+def get_end_of_month(eomdate: date) -> date:
+    """---------------------------------------------------
+    func: Returns last day of month for argument passed
+    ---------------------------------------------------"""
 
     year = eomdate.year
     month = eomdate.month
     _, num_days = cal.monthrange(year, month)
-    end_date = dt(year, month, num_days)
+    end_date = date(year, month, num_days)
     return end_date
 
 
-def business_year(act_date, workbook):
+def business_year(act_date: date, workbook) -> int:
+    """---------------------------------------------------
+    func: Returns the business year (not actual year)
+    i.e Business becomes operational in 2025 = Year 1
+    ---------------------------------------------------"""
+
     wksbd = cn.WKSBD
     bdcol = cn.WKSBD_ED_COL_1
     bdrw = cn.WKSBD_ED_ROW_1
@@ -45,7 +56,11 @@ def business_year(act_date, workbook):
     return year_3
 
 
-def business_month(act_date, workbook):
+def business_month(act_date: date, workbook) -> int:
+    """---------------------------------------------------
+    func: Returns the business month (not actual month)
+    i.e Business becomes operational in April 2026 = mon 1
+    ---------------------------------------------------"""
     wksbd = cn.WKSBD
     bdcol = cn.WKSBD_ED_COL_1
     bdrw = cn.WKSBD_ED_ROW_1

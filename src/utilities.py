@@ -9,14 +9,17 @@ from dateutil.relativedelta import relativedelta as rd
 import constants as cn
 
 
-def create_bus_years():
+def create_bus_years() -> None:
+    """---------------------------------------------------
+    func: Takes the business opening date and creates the
+    start date for business years 1, 2 and 3 ONLY!
+    ---------------------------------------------------"""
+    # --Initialisation--
     filepath = cn.FPEXCEL
     wkbbd = op.load_workbook(filepath)
     wksbd = cn.WKSBD
     bdcol = cn.WKSBD_ED_COL_1
     bdrw = cn.WKSBD_ED_ROW_1
-
-    # Create Years
 
     # Set Year 1 Date
     year_1_dt = wkbbd[wksbd].cell(bdrw, bdcol).value

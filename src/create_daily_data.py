@@ -11,7 +11,11 @@ from openpyxl import load_workbook as lw
 import constants as cn
 
 
-def clear_data_wksfdai():
+def clear_data_wksfdai() -> None:
+    """---------------------------------------------------
+    func: Clears data from a range of cells inside an
+     .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSFDAI
@@ -62,7 +66,11 @@ def clear_data_wksfdai():
     print("Clearing Daily Data Complete!")
 
 
-def insert_data_wksfdai(df_fdai):
+def insert_data_wksfdai(df_fdai: pd.DataFrame) -> pd.DataFrame:
+    """---------------------------------------------------
+    func: Creates and inserts data into a range of cells 
+    inside an .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSFDAI
@@ -131,3 +139,7 @@ def insert_data_wksfdai(df_fdai):
         print(f'Exporting Daily Data {aloop} Complete!')
 
     return df_fdai
+
+
+if __name__ == "__main__":
+    print("This module is intended for import only")
