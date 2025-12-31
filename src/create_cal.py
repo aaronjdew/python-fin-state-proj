@@ -18,7 +18,11 @@ from global_functions import (
     business_month as bus_mon)
 
 
-def clear_data_wkscldr():
+def clear_data_wkscldr() -> None:
+    """---------------------------------------------------
+    func: Clears data from a range of cells inside an
+     .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSCLDR
@@ -68,7 +72,11 @@ def clear_data_wkscldr():
     print("Clearing Calendar Data Complete!")
 
 
-def insert_data_wkscldr():
+def insert_data_wkscldr() -> pd.DataFrame:
+    """---------------------------------------------------
+    func: Creates and inserts data into a range of cells 
+    inside an .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSCLDR
@@ -145,3 +153,7 @@ def insert_data_wkscldr():
         print(f'Exporting Calendar Data {aloop} Complete!')
 
     return df_newcal
+
+
+if __name__ == "__main__":
+    print("This module is intended for import only")

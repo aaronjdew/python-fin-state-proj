@@ -11,7 +11,11 @@ import pandas as pd
 import constants as cn
 
 
-def clear_data_wksfmon():
+def clear_data_wksfmon() -> None:
+    """---------------------------------------------------
+    func: Clears data from a range of cells inside an
+     .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSFMON
@@ -61,7 +65,11 @@ def clear_data_wksfmon():
     print("Clearing Monthly Data Complete!")
 
 
-def insert_data_wksfmon(df_fdai):
+def insert_data_wksfmon(df_fdai: pd.DataFrame) -> None:
+    """---------------------------------------------------
+    func: Creates and inserts data into a range of cells 
+    inside an .xlsx worksheet
+    ---------------------------------------------------"""
     # --Initialisation--
     filepath = cn.FPEXCEL
     worksheet = cn.WKSFMON
@@ -103,3 +111,7 @@ def insert_data_wksfmon(df_fdai):
                                na_rep='', header=False)
 
         print(f'Exporting Monthly Data {aloop} Complete!')
+
+
+if __name__ == "__main__":
+    print("This module is intended for import only")
