@@ -3,7 +3,7 @@
 -------------------------------------------------------"""
 
 # --- File Path ---
-FPEXCEL = "../pyFinancialStatements.xlsx"
+FPEXCEL = "data/pyFinState.xlsx"
 
 # --- Sheets ---
 WKSBD = "BusData"
@@ -24,13 +24,13 @@ WKSCLDR_ED_COL_2 = 10
 # --- Bus Data metadata ---
 # *Actual columns in sheet
 # Business Years
-WKSBD_ED_COL_1 = 7
+WKSBD_ED_COL_1 = 2
 # Total Rooms
 WKSBD_ED_COL_2 = 2
 
 # *Actual rows in sheet
 # Business Years
-WKSBD_ED_ROW_1 = 14
+WKSBD_ED_ROW_1 = 17
 # Total Rooms
 WKSBD_ED_ROW_2 = 13
 
